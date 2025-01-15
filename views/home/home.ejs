@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking Blog</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="/js/script.js"></script>
+</head>
+
+<body>
+
+    <%- include('../partials/home-header') %>
+
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Wolle Come to Simple and Tasty Recipes</h1>
+                <p>Learn to cook delicious meals with easy-to-follow recipes.</p>
+        </section>
+
+        <main>
+            <section id="recipes">
+                <h2>Our Recipes</h2>
+                <div class="recipes-container">
+                    <% recipes.forEach(recipe=> { %>
+
+                        <div class="recipe">
+                            <img src="<%= recipe.recipeImagePath %>" alt="Sprout Salad" />
+                            <h3>
+                                <%= recipe.title %>
+                            </h3>
+                            <p>
+                                <%= recipe.description %>
+                            </p>
+                            <span>Prep: <%= recipe.prep %> | Cook: <%= recipe.cook %></span>
+
+                            <form action="/home/delete-recipe/<%= recipe.id %>" method="post">
+                                <button style="background: maroon; width: 100%;">
+                                    HAPUS
+                                </button>
+                            </form>
+                        </div>
+
+                        <% }); %>
+
+                </div>
+            </section>
+
+            <section id="features">
+                <h2>Our Awesome Services</h2>
+                <div class="features-container">
+                    <div class="feature">
+                        <img src="/image/quality food.png" alt="Quality Food" />
+                        <h3>Quality Food</h3>
+                        <p>Recipes made with the freshest ingredients.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="/image/sheff.png" alt="Cook like a Chef" />
+                        <h3>Cook like a Chef</h3>
+                        <p>Learn professional cooking techniques.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="/image/ezy resept.png" alt="Easy Recipes" />
+                        <h3>Easy Recipes</h3>
+                        <p>Simple steps for tasty meals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>Discover Our Story</h2>
+                <p>Our mission is to inspire everyone to cook delicious meals.</p>
+            </section>
+
+            <section id="welcome" style="display: none">
+                <h2>Welcome to Cooking Blog</h2>
+                <p>
+                    Thank you for registering! Explore our delicious recipes and start
+                    your culinary journey today.
+                </p>
+                <button onclick="location.href='#recipes'">Explore Recipes</button>
+            </section>
+        </main>
+
+        <%- include('../partials/home-footer') %>

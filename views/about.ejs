@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Cooking</title>
+    <link rel="stylesheet" href="/css/about.css" />
+</head>
+
+<body>
+    <%- include('./partials/main-header') %>
+        <main>
+            <section class="about-content">
+                <h1>About Us</h1>
+                <p>
+                    Welcome to our Cooking website! We share delicious recipes, cooking
+                    tips, and culinary inspiration to help you enjoy cooking at home.
+                </p>
+
+                <!-- Cooking Image -->
+                <div class="about-image">
+                    <img src="/image/cooking.jpg" alt="Cooking Image" />
+                </div>
+
+                <h2>Why We Love Cooking</h2>
+                <p>
+                    Cooking is an art form and a way to connect with others. It’s about
+                    bringing people together around the table, creating new flavors, and
+                    sharing memories. Whether you’re a beginner or an experienced chef,
+                    there’s always something new to learn.
+                </p>
+
+                <button id="more-info-btn" onclick="document.location.href='/login'">Get Started</button>
+                <div id="more-info" class="hidden">
+                    <p>
+                        Join our cooking community! Share your own recipes, get inspired by
+                        others, and learn tips and tricks from expert chefs. Cooking is more
+                        than just a hobby; it’s a way to express creativity and explore new
+                        cultures.
+                    </p>
+                </div>
+
+                <!-- Additional Features Section -->
+                <section class="cooking-features">
+                    <h2>Our Features</h2>
+                    <div class="feature">
+                        <img src="/image/delicious.jpg" alt="Feature 1" />
+                        <h3>Delicious Recipes</h3>
+                        <p>
+                            Find a variety of recipes for breakfast, lunch, dinner, and
+                            desserts to suit all tastes and skill levels.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <img src="/image/sheff.png" alt="Feature 2" />
+                        <h3>Cooking Tips</h3>
+                        <p>
+                            Get expert tips to improve your cooking techniques, whether you're
+                            boiling, baking, or grilling.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <img src="/image/community.jpg" alt="Feature 3" />
+                        <h3>Community Sharing</h3>
+                        <p>
+                            Share your own recipes and ideas with a passionate community of
+                            cooking enthusiasts.
+                        </p>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <%- include('./partials/main-footer') %>

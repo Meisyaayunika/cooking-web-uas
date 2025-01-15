@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="/register" method="post" id="registrationForm">
+            <div class="form-grid">
+
+                <div class="form-left">
+                    <label for="NamaLengkap">Nama Lengkap</label>
+                    <input type="text" id="NamaLengkap" name="fullname" placeholder="Nama Lengkap" required />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Tuliskan email" required />
+
+                    <label for="Nomer Telepon">Phone Number</label>
+                    <input type="tel" id="Nomer Telepon" name="phone" placeholder="Tuliskan Nomer Telepon" required />
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password" required />
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        placeholder="Confirm your password" required />
+                </div>
+
+
+                <div class="form-right">
+                    <label for="position">Pilih Masakanan yang Ingin dicari</label>
+                    <select id="position" name="position" required>
+                        <option value="" disabled selected>Cari Pilihan anda</option>
+                        <option value="Masakan Medan">Masakan Medan</option>
+                        <option value="Masakan Bandung">Masakan Bandung</option>
+                        <option value="Masakan ">Masakan Bali</option>
+                    </select>
+
+                    <label for="address">Alamat</label>
+                    <input type="text" id="address" name="address" placeholder="Tuliskan alamat anda" required />
+
+                    <label for="city">Kota</label>
+                    <input type="text" id="city" name="city" placeholder="Tuliskan kota anda tinggal" required />
+
+                    <label>Gender</label>
+                    <div class="gender-options">
+                        <input type="radio" id="male" name="gender" value="Male" required />
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="Female" />
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" value="Other" />
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Register</button>
+            <a href="/login" class="toggle-link">Already have an account? Login</a>
+        </form>
+    </div>
+    <!-- <script src="/js/regis.js"></script> -->
+</body>
+
+</html>

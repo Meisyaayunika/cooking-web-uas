@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recipes</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <%- include('../partials/home-header') %>
+        <section id="recipes">
+            <h2>Our Recipes</h2>
+            <section id="home" class="hero">
+                <div class="hero-text">
+                    <h1>Add your simple Recipes</h1>
+                    <p>Learn to cook delicious meals with easy-to-follow recipes.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="/image/pitzza.jpg" alt="Delicious food" height="200" width="150" />
+                </div>
+            </section>
+        </section>
+        <div>
+            <section id="recipes">
+                <h2>Our Recipes</h2>
+                <button id="add-recipe-btn">Add Recipe</button>
+                <form action="/home/upload-recipe" method="post" enctype="multipart/form-data">
+                    <input type="text" name="title" placeholder="Recipe Title" required />
+                    <textarea name="description" placeholder="Recipe Description" required></textarea>
+                    <input type="text" name="prep" placeholder="Prep Time" required />
+                    <input type="text" name="cook" placeholder="Cook Time" required />
+                    <input type="file" name="file" accept="image/*" required />
+                    <button type="submit">Save Recipe</button>
+                    <button type="button" id="cancel-form">Cancel</button>
+                </form>
+                <div class="recipes-container"></div>
+            </section>
+        </div>
+        </section>
+
+        <script defer src="/js/recipes.js"></script>
+
+        <%- include('../partials/home-footer') %>

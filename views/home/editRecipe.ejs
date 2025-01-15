@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Recipe</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <%- include('../partials/home-header') %>
+        <section id="recipes">
+            <h2>Edit Recipe</h2>
+        </section>
+        <div>
+            <section id="recipes">
+                <form action="/home/update-recipe/<%= recipeId %>" class="form-control" method="post"
+                    enctype="multipart/form-data">
+                    <input type="text" name="title" placeholder="Recipe Title" required
+                        value="<%= recipeData.title %>" />
+                    <textarea name="description" placeholder="Recipe Description"
+                        required><%= recipeData.description %></textarea>
+                    <input type="text" name="prep" placeholder="Prep Time" required value="<%= recipeData.prep %>" />
+                    <input type="text" name="cook" placeholder="Cook Time" required value="<%= recipeData.cook %>" />
+                    <input type="file" name="file" accept="image/*" />
+
+                    <button type="submit" style="background: blue;">UPDATE RECIPE</button>
+                    <br>
+
+                    <h4>Current Recipe Image</h4>
+                    <img src="<%= recipeData.recipeImagePath %>" width="200" height="200" alt="">
+
+                </form>
+                <div class="recipes-container"></div>
+            </section>
+        </div>
+        </section>
